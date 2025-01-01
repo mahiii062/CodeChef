@@ -1,0 +1,20 @@
+Problem Link:https://www.codechef.com/START167D/problems/NEWYEAR
+Solution is here:')
+// /**
+//  * MAHI A RASHED MASHFIK
+//  *     CC DIV 04
+//  *  01 January 2025
+//  */
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int X;
+    cin >> X;
+
+    int left = 24 - X;
+
+    cout << left << endl;
+}
