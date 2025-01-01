@@ -1,0 +1,69 @@
+Problem Link:https://www.codechef.com/START167D/problems/ALTUNI
+Solution is here:')
+// /**
+//  * MAHI A RASHED MASHFIK
+//  *     CC DIV 04
+//  *  01 January 2025
+//  */
+
+#include <bits/stdc++.h>
+using namespace std;
+using ll = long long;
+
+bool fun1(ll R0, const vector<ll> &vec1, const vector<ll> &vec2, ll N)
+{
+    ll curr = R0;
+    for (ll i = 0; i < N; i++)
+    {
+        if (curr > vec1[i])
+            curr--;
+        else
+        {
+            curr = curr + vec2[i];
+            curr--;
+        }
+        if (curr < 0)
+            return false;
+    }
+    return true;
+}
+
+ll fun2(const vector<ll> &vec1, const vector<ll> &vec2, ll N)
+{
+    ll l = 0, h = 1e9, ans = 1e9;
+    while (l <= h)
+    {
+        ll m = l + (h - l) / 2;
+        if (fun1(m, vec1, vec2, N))
+        {
+            ans = m;
+            h = m - 1;
+        }
+        else
+            l = m + 1;
+    }
+    return ans;
+}
+
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    ll c;
+    cin >> c;
+
+    while (c--)
+    {
+        ll n;
+        cin >> n;
+
+        vector<ll> vec1(n), vec2(n);
+        for (ll i = 0; i < n; i++)
+            cin >> vec1[i];
+        for (ll i = 0; i < n; i++)
+            cin >> vec2[i];
+
+        cout << fun2(vec1, vec2, n) << endl;
+    }
+}
