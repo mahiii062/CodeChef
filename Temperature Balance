@@ -1,0 +1,41 @@
+Problem Link:https://www.codechef.com/START167D/problems/TEMPBAL
+Solution is here:')
+// /**
+//  * MAHI A RASHED MASHFIK
+//  *     CC DIV 04
+//  *  01 January 2025
+//  */
+
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+
+void newYearFun()
+{
+    int c;
+    cin >> c;
+    while (c--)
+    {
+        int N;
+        cin >> N;
+        vector<int> vec(N);
+        for (int i = 0; i < N; i++)
+            cin >> vec[i];
+
+        ll x = 0, y = 0;
+        for (int i = 0; i < N; i++)
+        {
+            x = x + vec[i];
+            y = y + abs(x);
+        }
+
+        cout << y << endl;
+    }
+}
+
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+    newYearFun();
+}
