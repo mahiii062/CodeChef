@@ -1,0 +1,53 @@
+Problem Link:https://www.codechef.com/START167D/problems/SUMFSUB
+Solution is here:') with Time Complexity O(n^2)
+// /**
+//  * MAHI A RASHED MASHFIK
+//  *     CC DIV 04
+//  *  01 January 2025
+//  */
+
+#include <bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+
+void newYearFun()
+{
+    int c;
+    cin >> c;
+    while (c--)
+    {
+        ll n;
+        cin >> n;
+        string str;
+        cin >> str;
+
+        ll sum = 0;
+        vector<ll> vec1(n + 1, 0), vec2(n + 1, 0);
+
+        for (ll i = 1; i <= n; i++)
+        {
+            vec1[i] = vec1[i - 1] + (str[i - 1] == '0' ? 1 : 0);
+            vec2[i] = vec2[i - 1] + (str[i - 1] == '1' ? 1 : 0);
+        }
+
+        for (ll L = 1; L <= n; L++)
+        {
+            for (ll R = L; R <= n; R++)
+            {
+                ll zCnt = vec1[R] - vec1[L - 1];
+                ll oCnt = vec2[R] - vec2[L - 1];
+                sum = sum + max(zCnt, oCnt);
+            }
+        }
+
+        cout << sum << endl;
+    }
+}
+
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    newYearFun();
+}
