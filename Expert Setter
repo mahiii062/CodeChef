@@ -1,0 +1,23 @@
+Problem link: https://www.codechef.com/practice/course/logical-problems/DIFF800/problems/EXPERT
+Solution is here:')
+
+// 3rd January 2025
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int c;
+    cin >> c;
+
+    while (c--)
+    {
+        int x, y;
+        cin >> x >> y;
+
+        if (y * 2 >= x)
+            cout << "YES" << endl;
+        else
+            cout << "NO" << endl;
+    }
+}
