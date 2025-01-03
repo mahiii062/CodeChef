@@ -1,0 +1,22 @@
+Problem link: https://www.codechef.com/practice/course/number-theory/INTNT01/problems/CUTPAPER
+Solution is here:')
+
+// 3rd January 2025
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int c;
+    cin >> c;
+
+    while (c--)
+    {
+        int n, k;
+        cin >> n >> k;
+
+        int cut = (n / k) * (n / k);
+
+        cout << cut << endl;
+    }
+}
