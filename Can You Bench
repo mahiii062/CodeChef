@@ -1,0 +1,21 @@
+Problem Link: https://www.codechef.com/START168D/problems/HJJ
+
+Solution is Here:')
+
+
+
+// /**
+//  * MAHI A RASHED MASHFIK
+//  *     CC DIV 04
+//  *  08th January 2025
+//  */
+
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int x;
+    cin >> x;
+
+    cout << x + 20 << endl;
+}
