@@ -1,0 +1,49 @@
+Problem Link: https://www.codechef.com/START168D/problems/BIG
+
+Solution is Here:')
+
+
+// /**
+//  * MAHI A RASHED MASHFIK
+//  *     CC DIV 04
+//  *  08th January 2025
+//  */
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve()
+{
+    int c;
+    cin >> c;
+    while (c--)
+    {
+        int N;
+        cin >> N;
+        vector<int> vec1(N);
+        for (int i = 0; i < N; ++i)
+            cin >> vec1[i];
+
+        vector<int> vec2(N, 0);
+        int maxScore = 0;
+
+        for (int i = 0; i < N; ++i)
+        {
+            if (vec1[i] > maxScore)
+            {
+                vec2[i] = 1;
+                maxScore = vec1[i];
+            }
+        }
+
+        for (int i = 0; i < N; ++i)
+            cout << vec2[i] << (i == N - 1 ? "\n" : " ");
+    }
+}
+
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    solve();
+}
