@@ -1,0 +1,39 @@
+Problem Link: https://www.codechef.com/START168D/problems/P2P
+Solution is Here:')
+
+
+// /**
+//  * MAHI A RASHED MASHFIK
+//  *     CC DIV 04
+//  *  08th January 2025
+//  */
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int c;
+    cin >> c;
+
+    while (c--)
+    {
+        int n;
+        cin >> n;
+
+        string str, str2;
+        cin >> str >> str2;
+
+        int cnt = 0;
+        for (int i = 0; i < n; i++)
+        {
+            if (str[i] == '1' || str2[i] == '1')
+                cnt++;
+        }
+
+        if (cnt % 2 == 1)
+            cout << "YES" << endl;
+        else
+            cout << "NO" << endl;
+    }
+}
